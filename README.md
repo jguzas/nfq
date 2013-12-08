@@ -11,16 +11,11 @@ Albumai:
   Premium vartotojas gali kurti ir redaguoti albumus
   Nustatyti ar jie bus vieši, neprisijungusiems vartotojams.
   Pridėti nuotraukas į albumus
-<<<<<<< HEAD
-  Taip pat atvaziduojamas nuotraukų skaičius
-=======
->>>>>>> 7533c5db917f550441b522857c66d4d2419f3be7
-  
+  Taip pat atvaizduojamas nuotraukų skaičius
+
 Nuotraukos:
   Peržiūrėti nuotraukas
   Jas išdidinti
+  Ištrinti
   Paspausti patinka
-<<<<<<< HEAD
-  
-=======
->>>>>>> 7533c5db917f550441b522857c66d4d2419f3be7
+

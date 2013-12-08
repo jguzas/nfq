@@ -26,7 +26,6 @@
         <ul class="nav navbar-nav navbar-right">
             @if(Auth::check() )
             <li><p class="navbar-text">{{ Auth::user()->username }}</p></li>
-            <li><p class="navbar-text">{{ Auth::user()->id }}</p></li>
             <li><a href="{{ URL::route("users/logout") }}">Atsijungti</a></li>
             @else
             <li><a href="{{ URL::route("users/login") }}">Prisijungti</a></li>

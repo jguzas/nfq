@@ -37,10 +37,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/albums/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="23" selection-start="911" selection-end="911" vertical-scroll-proportion="0.608229" vertical-offset="0" max-vertical-offset="595">
+            <state line="20" column="23" selection-start="911" selection-end="911" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="595">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="10" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/menu.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="12" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.50635207" vertical-offset="197" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
@@ -74,9 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_10_25_111226_AlbumsTable.php" />
-        <option value="$PROJECT_DIR$/app/views/albums/edit.blade.php" />
-        <option value="D:/nfq/Show_the_love/new/love.php" />
         <option value="$PROJECT_DIR$/app/views/layout.blade.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/app/views/photos/index.blade.php" />
@@ -90,6 +105,9 @@
         <option value="$PROJECT_DIR$/app/controllers/PhotosController.php" />
         <option value="$PROJECT_DIR$/app/controllers/AlbumsController.php" />
         <option value="$PROJECT_DIR$/app/views/albums/index.blade.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/SETUP.md" />
+        <option value="$PROJECT_DIR$/app/views/menu.blade.php" />
       </list>
     </option>
   </component>
@@ -385,10 +403,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="780" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="true" weight="0.8594225" sideWeight="0.67038214" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.8594225" sideWeight="0.67038214" order="4" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1310606" sideWeight="0.8678344" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -439,27 +457,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="572">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/CommentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.4965035" vertical-offset="856" max-vertical-offset="1428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/FavouritesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="9" selection-start="1154" selection-end="1154" vertical-scroll-proportion="-1.1993006" vertical-offset="1349" max-vertical-offset="1921">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="0" selection-start="1329" selection-end="1329" vertical-scroll-proportion="1.0699301" vertical-offset="0" max-vertical-offset="731">
@@ -546,7 +543,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/albums/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="23" selection-start="911" selection-end="911" vertical-scroll-proportion="0.608229" vertical-offset="0" max-vertical-offset="595">
+        <state line="20" column="23" selection-start="911" selection-end="911" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SETUP.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="27" selection-start="278" selection-end="278" vertical-scroll-proportion="0.32409012" vertical-offset="0" max-vertical-offset="577">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="10" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="12" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.50635207" vertical-offset="197" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
