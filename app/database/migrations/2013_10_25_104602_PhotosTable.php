@@ -18,8 +18,7 @@ class PhotosTable extends Migration {
             $table->string('path');
             $table->string('title');
             $table->string('description');
-            $table->dateTime("date");
-            $table->boolean('cover');
+            $table->integer('favourites');
             $table->integer('album_id');
             $table->dateTime("created_at");
             $table->dateTime("updated_at");

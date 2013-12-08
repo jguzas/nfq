@@ -21,6 +21,7 @@ class AlbumsTable extends Migration {
             $table->string('l_description');
             $table->string('place');
             $table->boolean('public');
+            $table->string('cover');
             $table->integer('photos_number');
             $table->dateTime("created_at");
             $table->dateTime("updated_at");

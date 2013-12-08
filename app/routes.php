@@ -19,7 +19,6 @@ Route::get('/',function()
 Route::any('publicalbums', 'AlbumsController@index');
 Route::any('publicphotos', 'AlbumsController@publicAlbums');
 Route::any('albums/{albums}/photos','PhotosController@index');
-//Route::any('publicphotos', 'PhotosController@publicPhotos');
 
 Route::group(["before" => "guest"], function()
 {
@@ -37,24 +36,12 @@ Route::group(["before" => "auth"], function()
         "uses" => "UsersController@logoutAction"
     ]);
 
-    //Route::get("/create", function()
-    //{
-    //    return View::make('albums/create');
-    //});
-
-    //Route::any("/createAlbum", [
-    //    "as"   => "albums/createAlbum",
-    //    "uses" => "AlbumsController@createAlbumAction"
-    //]);
-
+   ;
+    Route::any('favourites', 'FavouritesController@index');
     Route::post('albums/{albums}/photos/upload', array('as' => 'upload', 'uses' => 'PhotosController@postUpload'));
 
     Route::resource('albums', 'AlbumsController');
     Route::resource('albums.photos', 'PhotosController');
     Route::resource('photos.comments', 'CommentsController');
-
-    //Route::get('photos/upload', 'PhotosController@postUpload');
-
-
 
 });

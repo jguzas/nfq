@@ -10,11 +10,6 @@ class Photos extends BaseModel  {
      */
     protected $table = 'photos';
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
 
     public function albums()
     {
@@ -25,10 +20,7 @@ class Photos extends BaseModel  {
 
 
     protected static $rules =[
-        //'title' => 'required',
-        //'sDescription' => 'required',
-        //'lDescription' => 'required',
-        //'place' => 'required'
+
     ];
 
 }

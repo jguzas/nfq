@@ -4,12 +4,14 @@ class PhotosController extends BaseController {
 
     protected $layout = 'layout';
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index($album_id)
+    /**
+     * Display a listing of the resource.
+     *
+     * SELECT * FROM photos WHERE album_id=$album_id
+     * @param $album_id
+     * @return mixed
+     */
+    public function index($album_id)
 	{
         $albums = Albums::find($album_id);
 
@@ -78,25 +80,36 @@ class PhotosController extends BaseController {
 	}
 
 	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($album_id, $photo_id)
+     * Remove the specified resource from storage.
+     *
+     * SELECT * FROM albums WHERE id=$album_id AND user_id=$id
+     * DELETE FROM photos WHERE id=$photo_id
+     * @param $album_id
+     * @param $photo_id
+     * @return mixed
+     */
+    public function destroy($album_id, $photo_id)
 	{
+
+        if( Albums::where('id','=',$album_id)->where('user_id','=' ,Auth::user()->id)->count()==1){
+
+
         $post = Photos::find($photo_id);
         $post->delete();
-
+        }
         return Redirect::route('albums.photos.index',['albums' => $album_id]);
 	}
 
-
+    /**
+     * Upload photos
+     *
+     * INSERT INTO photos VALUES ()
+     * @param $id
+     * @return mixed
+     */
     public function postUpload($id){
 
         $file = Input::file('file');
-       var_dump($id);
-//        return Response::json($a);
 
         $destinationPath = 'uploads/';
         $filename = $file->getClientOriginalName();
@@ -117,22 +130,11 @@ class PhotosController extends BaseController {
         }
 
         $photo = new Photos;
-
-
         $photo->album_id = $id;
-        //$photo->title ='a';
-       // $photo->description ='a';
-        //$photo->lDescription ='a';
-        //$photo->place='a';
+        $photo->favourites = 0;
         $photo->path = $filename;
         $photo->save();
 
-        var_dump($photo);
-        //$upload_success = Input::file('file')->move($destinationPath, $filename);
-        //$post->title = Input::get('title');
-        // $post->sDescription = Input::get('sDescription');
-        //$post->lDescription = Input::get('lDescription');
-        //$post->place = Input::get('place');
 
         if( $upload_success ) {
             return Response::json('success', 200);
@@ -140,8 +142,6 @@ class PhotosController extends BaseController {
             return Response::json('error', 400);
         }
 
-
     }
-
 
 }

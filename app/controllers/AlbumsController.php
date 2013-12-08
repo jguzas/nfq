@@ -6,13 +6,14 @@ class AlbumsController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
-	 *
+	 * SELECT * FROM albums
+     * SELECT * FROM albums WHERE public=1
 	 * @return Response
 	 */
 	public function index()
 	{
         if(Auth::check()){
-            $albums = Albums::where('user_id', '=', Auth::user()->id)->get();
+            $albums = Albums::all();
             $this->layout->content = View::make('albums/index', compact('albums'));
         } else {
             $albums = Albums::where('public', '=', 1)->get();
@@ -33,6 +34,7 @@ class AlbumsController extends BaseController {
 	/**
 	 * Store a newly created resource in storage.
 	 *
+     * INSERT INTO albums VALUES ()
 	 * @return Response
 	 */
 	public function store()
@@ -51,7 +53,8 @@ class AlbumsController extends BaseController {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  int  $id
+	 * SELECT * FROM albums WHERE id=$id
+     * @param  int  $id
 	 * @return Response
 	 */
 	public function show($id)
@@ -63,6 +66,7 @@ class AlbumsController extends BaseController {
 	/**
 	 * Show the form for editing the specified resource.
 	 *
+     * SELECT * FROM albums WHERE id=$id
 	 * @param  int  $id
 	 * @return Response
 	 */
@@ -76,6 +80,9 @@ class AlbumsController extends BaseController {
 	/**
 	 * Update the specified resource in storage.
 	 *
+     * UPDATE Albums SET 'title'=title, 's_description'=s_description, 'l_description'=l_description,
+     *                   'place'=place, 'public'=public
+     *              WHERE id=$id
 	 * @param  int  $id
 	 * @return Response
 	 */
@@ -99,6 +106,7 @@ class AlbumsController extends BaseController {
 	/**
 	 * Remove the specified resource from storage.
 	 *
+     * DELETE FROM albums WHERE id=$id
 	 * @param  int  $id
 	 * @return Response
 	 */
@@ -110,14 +118,12 @@ class AlbumsController extends BaseController {
         return Redirect::route('albums.index');
 	}
 
-
+    /**
+     * Display list of public albums
+     *
+     * @return Response
+     */
     public function publicAlbums(){
-        //$photos = Albums::where('public', '=', '1')->get();
-        //$photos = Albums::has('photos')->where('public', '=', 1)->get();
-        //$photos = Albums::with(array('photos' => function($query)
-        //    {
-       //         $query->where('public', '1');
-       //     }))->get();
 
         $photos = Albums::with('photos')->where('public', '=','1')->get();
         $this->layout->content=View::make('photos/indexpublic', compact('photos'));

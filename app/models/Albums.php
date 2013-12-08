@@ -10,12 +10,6 @@ class Albums extends BaseModel  {
      */
     protected $table = 'albums';
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
-
     public function photos()
     {
         return $this->hasMany('Photos', 'album_id');

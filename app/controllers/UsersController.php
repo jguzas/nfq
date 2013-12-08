@@ -3,6 +3,12 @@ use Illuminate\Support\MessageBag;
 
 class UsersController extends BaseController {
 
+
+    /**
+     * Login user
+     *
+     * @return mixed
+     */
     public function loginAction() {
 
         $errors = new MessageBag();
@@ -51,6 +57,12 @@ class UsersController extends BaseController {
         return View::make("users/login", $data);
     }
 
+
+    /**
+     * Logouts user
+     *
+     * @return mixed
+     */
     public function logoutAction(){
         Auth::logout();
         return Redirect::to("/");

@@ -15,8 +15,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         @if (Auth::check())
         <ul class="nav navbar-nav">
-
+            @if (Auth::user()->role == 'admin')
             <li><a href="/albums/create">Sukurti albumą</a></li>
+            @endif
             <li><a href="/albums">Albumų sąrašas</a></li>
 
         </ul>

@@ -35,7 +35,10 @@
             {{ Form::label("place", "Vieta") }}<br>
             {{ Form::text('place') }}<br>
 
-            {{ Form::submit("Sukurti") }}
+            {{ Form::label("public", "Viešas?") }}<br>
+            {{ Form::checkbox('public') }}<br>
+
+            {{ Form::submit("Atnaujinti", ["class" => "btn btn-lg btn-success btn-block"]) }}
             {{ Form::close() }}
 
             </div>

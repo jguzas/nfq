@@ -10,19 +10,10 @@ class Comments extends BaseModel  {
      */
     protected $table = 'comments';
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
-
     protected $guarded = [];
 
     protected static $rules =[
-        ///'title' => 'required',
-        //'sDescription' => 'required',
-        //'lDescription' => 'required',
-        //'place' => 'required'
+
     ];
 
 }
