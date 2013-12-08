@@ -88,12 +88,16 @@ class AlbumsController extends BaseController {
 	 */
 	public function update($id)
 	{
+
+        $photos = Photos::where('album_id','=',$id)->count();
+
         $post = Albums::find($id);
         $post->title = Input::get('title');
         $post->s_description = Input::get('s_description');
         $post->l_description = Input::get('l_description');
         $post->place = Input::get('place');
         $post->public = Input::get('public');
+        $post->photos_number = $photos;
 
 
         if ($post->save()){

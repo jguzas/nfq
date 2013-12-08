@@ -1,7 +1,7 @@
 @section('content')
 <div class="panel panel-default clearfix">
 
-    <p class="lead">Mano albumai</p>
+    <p class="lead">Albumai</p>
     @foreach($albums as $album)
          <div class="panel panel-default clearfix">
 
@@ -18,9 +18,11 @@
              <a href="{{ route('albums.edit', ['albums' => $album->id]) }}" class="btn btn-success" role="button">Redaguoti</a>
 
              {{ Form::submit("Trinti", ["class" => "btn btn-danger"]) }}
+             Nuotraukų <strong>{{$album->photos_number}}</strong>
+             @endif
              {{ Form::close() }}
 
-             @endif
+
          </div>
     @endforeach
 
